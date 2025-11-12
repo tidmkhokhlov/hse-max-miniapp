@@ -2,6 +2,7 @@
   "name": "hse-max-miniapp",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://tidmkhokhlov.github.io/hse-max-miniapp",
   "type": "module",
   "scripts": {
     "dev": "vite",
