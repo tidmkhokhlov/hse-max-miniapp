@@ -5,7 +5,7 @@ import ProgramDetail from "./pages/ProgramDetail";
 
 export default function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/hse-max-miniapp">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/programs/bachelor" element={<Programs />} />
