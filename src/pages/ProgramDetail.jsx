@@ -1,10 +1,24 @@
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import BackButton from "../components/BackButton";
 import { bachelorPrograms } from "../data/bachelor";
+import { magistracyPrograms } from "../data/magistracy.js";
+import { postgraduatePrograms } from "../data/postgraduate.js";
 
 export default function ProgramDetail() {
     const { name } = useParams();
-    const program = bachelorPrograms.find((p) => p.name === decodeURIComponent(name));
+    const location = useLocation();
+
+    let programType;
+
+    if (location.pathname.includes("/bachelor")) {
+        programType = bachelorPrograms;
+    } else if (location.pathname.includes("/magistracy")) {
+        programType = magistracyPrograms;
+    } else {
+        programType = postgraduatePrograms;
+    }
+
+    const program = programType.find((p) => p.name === decodeURIComponent(name));
 
     if (!program) {
         return (

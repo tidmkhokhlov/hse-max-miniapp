@@ -9,7 +9,11 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/programs/bachelor" element={<Programs />} />
-                <Route path="/program/:name" element={<ProgramDetail />} />
+                <Route path="/programs/bachelor/:name" element={<ProgramDetail />} />
+                <Route path="/programs/magistracy" element={<Programs />} />
+                <Route path="/programs/magistracy/:name" element={<ProgramDetail />} />
+                <Route path="/programs/postgraduate" element={<Programs />} />
+                <Route path="/programs/postgraduate/:name" element={<ProgramDetail />} />
             </Routes>
         </BrowserRouter>
     );
